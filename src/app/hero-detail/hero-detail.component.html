@@ -7,8 +7,6 @@
       <input [(ngModel)]="hero.name" placeholder="name"/>
     </label>
   </div>
-  <div *ngIf="hero.items.length > 0" style="margin: 0px 0px 5px;" class="text">Owned Items:
-    <div *ngFor="let item of hero.items" style="margin-left: 15px; color: #333">{{ item.name }}</div>
-  </div>
-  <button (click)="goToStore()" routerLink="/items/{{ hero.id }}" class="buyButton">Buy Item</button>
+  <app-items></app-items>
+  
 </div>
