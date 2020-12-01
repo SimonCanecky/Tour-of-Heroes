@@ -13,6 +13,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HeroitemsComponent } from './heroitems/heroitems.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
     ItemDetailComponent,
     MessagesComponent,
     DashboardComponent,
+    HeroitemsComponent,
 
   ],
   imports: [

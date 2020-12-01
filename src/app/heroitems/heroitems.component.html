@@ -1,0 +1,17 @@
+<h2>Hero Items</h2>
+<ul class="heroitems">
+  <li *ngFor="let heroitem of heroitems"
+    [class.selected]="heroitem === selectedHeroitem"
+    (click)="onSelect(heroitem)">
+    <span class="badge">{{heroitem.id}}</span> {{heroitem.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedHeroitem">
+
+  <h2>{{selectedHeroitem.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedHeroitem.id}}</div>
+  <div><span>name: </span>{{selectedHeroitem.name}}</div>
+  <div><span>price: </span>{{selectedHeroitem.price}}<span>€</span></div>
+
+</div>
