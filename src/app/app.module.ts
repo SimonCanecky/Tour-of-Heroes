@@ -22,7 +22,8 @@ import { AppRoutingModule } from './app-routing.module';
     HeroDetailComponent,
     ItemDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+
   ],
   imports: [
     BrowserModule,
