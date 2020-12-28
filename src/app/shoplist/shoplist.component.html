@@ -1,0 +1,8 @@
+<h2>Shop list</h2>
+
+<ul class="items">
+    <li *ngFor="let item of items">
+    <span class="badge">{{item.id}}</span> {{item.name}} 
+    <button (click)="buyitem(item)">Buy {{item.price}} €</button>
+    </li>
+  </ul>

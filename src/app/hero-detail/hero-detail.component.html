@@ -8,7 +8,8 @@
     </label>
   </div>
   <div><span>money: </span>{{hero.money}}<span>€</span></div>
-  <button (click)="goBack()">go back</button>
+  <button (click)="goBack()">Go Back</button>
+  <button (click)="buy()"><a routerLink="/shoplist/{{hero.id}}">Buy Item</a></button>
 
   <app-heroitems></app-heroitems>
   

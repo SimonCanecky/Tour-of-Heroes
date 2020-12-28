@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Heroitem } from '../heroitem';
 import { HEROITEMS } from '../mock-heroitems';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-heroitems',
@@ -13,7 +15,7 @@ export class HeroitemsComponent implements OnInit {
   heroitems = HEROITEMS;
   selectedHeroitem: Heroitem;
 
-  constructor() { }
+  constructor(/*private route: ActivatedRoute,*/) { }
 
   ngOnInit() {
   }
