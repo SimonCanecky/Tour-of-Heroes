@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Heroitem } from '../heroitem';
 import { HEROITEMS } from '../mock-heroitems';
 import { ActivatedRoute } from '@angular/router';
@@ -12,10 +12,12 @@ import { ActivatedRoute } from '@angular/router';
 
 export class HeroitemsComponent implements OnInit {
 
+  @Input() heroitem: Heroitem;
+
   heroitems = HEROITEMS;
   selectedHeroitem: Heroitem;
 
-  constructor(/*private route: ActivatedRoute,*/) { }
+  constructor(/*private route: ActivatedRoute*/) { }
 
   ngOnInit() {
   }
