@@ -9,6 +9,7 @@
   </div>
   <div><span>money: </span>{{hero.money}}<span>€</span></div>
   <button (click)="goBack()">Go Back</button>
+  <button (click)="save()">Save</button>
   <button (click)="buy()"><a routerLink="/shoplist/{{hero.id}}">Buy Item</a></button>
 
   <app-heroitems></app-heroitems>
