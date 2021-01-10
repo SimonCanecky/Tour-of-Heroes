@@ -53,9 +53,8 @@
     background-color: #cfd8dc;
   }
   button.delete {
-    position: relative;
-    left: 180;
-    top: -9px;
+    display: block;
+    margin:-38px 197px;
     background-color: red;
     color: white;
   }
