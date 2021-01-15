@@ -11,6 +11,7 @@ import { MessageService } from '../message.service';
 export class HeroesComponent implements OnInit { 
 
   heroes: Hero[];
+  sortBy: string = 'Hero ID';
 
   constructor(private heroService: HeroService) { }
 
@@ -32,9 +33,22 @@ export class HeroesComponent implements OnInit {
       });
   }
   
-
+  
   delete(hero: Hero): void {
     this.heroes = this.heroes.filter(h => h !== hero);
     this.heroService.deleteHero(hero).subscribe();
+  }
+
+  sort(sortBy: string) {
+    this.sortBy = sortBy
+
+    if(this.sortBy === 'Hero Name')
+      this.heroes.sort((a,b) => a.name.localeCompare(b.name));
+
+    if(this.sortBy === 'Hero ID')
+      this.heroes.sort((a,b) => a.id > b.id ? 1 : -1);
+
+    if(this.sortBy === 'Hero Money')
+      this.heroes.sort((a,b) => b.money > a.money ? 1 : -1);
   }
 }

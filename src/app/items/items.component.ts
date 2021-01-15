@@ -9,23 +9,45 @@ import { MessageService } from '../message.service';
   styleUrls: ['./items.component.css']
 })
 export class ItemsComponent implements OnInit {
-
-  selectedItem: Item;
   items: Item[];
+  sortBy: string = 'Item ID';
 
-  constructor(private itemService: ItemService, private messageService: MessageService) { }
+  constructor(private itemService: ItemService) { }
 
   ngOnInit() {
     this.getItems();
   }
 
-  onSelect(item: Item): void {
-    this.selectedItem = item;
-    this.messageService.add(`ItemsComponent: Selected item id=${item.id}`);
-  }
-
   getItems(): void {
     this.itemService.getItems()
         .subscribe(items => this.items = items);
+  }
+
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.itemService.addItem({ name } as Item)
+      .subscribe(item => {
+        this.items.push(item);
+      });
+  }
+  
+  
+  delete(item: Item): void {
+    this.items = this.items.filter(h => h !== item);
+    this.itemService.deleteItem(item).subscribe();
+  }
+
+  sort(sortBy: string) {
+    this.sortBy = sortBy
+
+    if(this.sortBy === 'Item Name')
+      this.items.sort((a,b) => a.name.localeCompare(b.name));
+
+    if(this.sortBy === 'Item ID')
+      this.items.sort((a,b) => a.id > b.id ? 1 : -1);
+
+    if(this.sortBy === 'Item Price')
+      this.items.sort((a,b) => b.price > a.price ? 1 : -1);
   }
 }

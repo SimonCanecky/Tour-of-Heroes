@@ -1,10 +1,30 @@
 <h2>Items Shop</h2>
 
+<div>
+  <label>Item name:
+    <input #itemName />
+  </label>
+  <button (click)="add(itemName.value); itemName.value=''">
+    add
+  </button>
+</div>
+
+<div class="dropdown">
+  <button class="button">{{sortBy}} ▼</button>
+  <div class="dropdownbtn">
+    <a class="property" (click)="sort('Item ID')">Item ID</a>
+    <a class="property" (click)="sort('Item Name')">Item Name</a>
+    <a class="property" (click)="sort('Item Price')">Item Price</a>
+  </div>
+</div>
+
 <ul class="items">
-  <li *ngFor="let item of items"
-    [class.selected]="item === selectedItem"
-    (click)="onSelect(item)">
-    <span class="badge">{{item.id}}</span> {{item.name}} 
+  <li *ngFor="let item of items">
+    <a routerLink="/detail/{{item.id}}">
+      <span class="badge">{{item.id}}</span> {{item.name}}
+    </a>
+    <button class="delete" title="delete item"(click)="delete(item)">x</button>
   </li>
 </ul>
-<app-item-detail [item]="selectedItem"></app-item-detail>
+
+<app-item-search></app-item-search>
