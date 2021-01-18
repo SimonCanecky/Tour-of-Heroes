@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'heroes', component: HeroesComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'items', component: ItemsComponent },
-  { path: 'detail/:id', component: ItemDetailComponent },
+  { path: 'detail-item/:id', component: ItemDetailComponent },
   { path: 'shoplist/:id', component: ShoplistComponent },
   //{ path: 'heroitems', component: HeroitemsComponent },
 ];

@@ -20,7 +20,7 @@
 
 <ul class="items">
   <li *ngFor="let item of items">
-    <a routerLink="/detail/{{item.id}}">
+    <a routerLink="/detail-item/{{item.id}}">
       <span class="badge">{{item.id}}</span> {{item.name}}
     </a>
     <button class="delete" title="delete item"(click)="delete(item)">x</button>
