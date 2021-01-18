@@ -9,14 +9,18 @@
   </button>
 </div>
 
-<div class="dropdown">
-  <button class="button">{{sortBy}} ▼</button>
-  <div class="dropdownbtn">
-    <a class="property" (click)="sort('Hero ID')">Hero ID</a>
-    <a class="property" (click)="sort('Hero Name')">Hero Name</a>
-    <a class="property" (click)="sort('Hero Money')">Hero Money</a>
+<div class="marginbtn">
+  <div class="dropdown">
+    <button class="button">{{sortBy}} ▼</button>
+    <div class="dropdownbtn">
+      <a class="property" (click)="sort('Hero ID')">Hero ID</a>
+      <a class="property" (click)="sort('Hero Name')">Hero Name</a>
+      <a class="property" (click)="sort('Hero Money')">Hero Money</a>
+    </div>
   </div>
+  <button class="create-hero">Create Hero</button>
 </div>
+
 
 <ul class="heroes">
   <li *ngFor="let hero of heroes">

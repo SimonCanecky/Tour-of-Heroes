@@ -86,3 +86,11 @@
   .property:hover {
     background-color: #eee;
   }
+
+  .marginbtn{
+    margin: 10px 0px;
+  }
+
+  .create-hero{
+    margin-left: 10px;
+  }
