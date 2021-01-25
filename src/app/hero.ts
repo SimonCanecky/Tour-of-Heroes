@@ -1,9 +1,11 @@
 
-import { Item } from './item';
+export class Hero {
 
-export interface Hero {
-    id: number;
-    name: string;
-    items: Item[];
-    money: number;
-    }
+    constructor(
+      public id: number,
+      public name: string,
+      public power: string,
+      public alterEgo?: string
+    ) {  }
+  
+  }

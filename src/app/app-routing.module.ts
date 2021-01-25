@@ -7,6 +7,8 @@ import { ItemsComponent } from './items/items.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { ShoplistComponent } from './shoplist/shoplist.component';
 import { HeroitemsComponent } from './heroitems/heroitems.component';
+import { HeroFormComponent } from './hero-form/hero-form.component';
+
 
 
 
@@ -18,6 +20,7 @@ const routes: Routes = [
   { path: 'items', component: ItemsComponent },
   { path: 'detail-item/:id', component: ItemDetailComponent },
   { path: 'shoplist/:id', component: ShoplistComponent },
+  { path: 'hero-form', component: HeroFormComponent },
   //{ path: 'heroitems', component: HeroitemsComponent },
 ];
 

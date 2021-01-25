@@ -48,7 +48,10 @@ export class HeroesComponent implements OnInit {
     if(this.sortBy === 'Hero ID')
       this.heroes.sort((a,b) => a.id > b.id ? 1 : -1);
 
-    if(this.sortBy === 'Hero Money')
-      this.heroes.sort((a,b) => b.money > a.money ? 1 : -1);
+    /*if(this.sortBy === 'Hero Money')
+      this.heroes.sort((a,b) => b.money > a.money ? 1 : -1);*/
+  }
+  create(){
+
   }
 }
