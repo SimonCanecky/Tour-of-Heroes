@@ -9,16 +9,16 @@ import { Item } from './item';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 1, name: 'Dr Nice', money: 55, life: 89, strength: 74, items: [] },
-      { id: 2, name: 'Narco', money: 60, life: 75, strength: 56, items: [] },
-      { id: 3, name: 'Bombasto', money: 45, life: 100, strength: 60, items: [] },
-      { id: 4, name: 'Celeritas', money: 63, life: 70, strength: 45, items: [] },
-      { id: 5, name: 'Magneta', money: 30, life: 113, strength: 69, items: [] },
-      { id: 6, name: 'RubberMan', money: 22, life: 120, strength: 85, items: [] },
-      { id: 7, name: 'Dynama', money: 80, life: 53, strength: 58, items: [] },
-      { id: 8, name: 'Dr IQ', money: 76, life: 60,  strength: 43,items: [] },
-      { id: 9, name: 'Magma', money: 19, life: 125, strength: 91, items: [] },
-      { id: 10, name: 'Tornado', money: 41, life: 105, strength: 70, items: [] }
+      { id: 1, name: 'Dr Nice', money: 55, life: 8, strength: 7, items: [] },
+      { id: 2, name: 'Narco', money: 60, life: 7, strength: 5, items: [] },
+      { id: 3, name: 'Bombasto', money: 45, life: 10, strength: 6, items: [] },
+      { id: 4, name: 'Celeritas', money: 63, life: 7, strength: 4, items: [] },
+      { id: 5, name: 'Magneta', money: 30, life: 5, strength: 6, items: [] },
+      { id: 6, name: 'RubberMan', money: 22, life: 4, strength: 8, items: [] },
+      { id: 7, name: 'Dynama', money: 80, life: 1, strength: 5, items: [] },
+      { id: 8, name: 'Dr IQ', money: 76, life: 6,  strength: 4,items: [] },
+      { id: 9, name: 'Magma', money: 19, life: 9, strength: 9, items: [] },
+      { id: 10, name: 'Tornado', money: 41, life: 2, strength: 7, items: [] }
     ];
     const items = [
       { id: 1, name: 'Sword', price: 35 },

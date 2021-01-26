@@ -9,16 +9,15 @@ import { Hero } from '../hero';
 })
 export class HeroFormComponent {
 
-  powers = ['Really Smart', 'Super Flexible',
-            'Super Hot', 'Weather Changer'];
+  moneys = [ 25, 50, 75, 100 ];
 
-  model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
+  model = new Hero(11, 'Dr IQ', this.moneys[0], 10, 7);
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
   newHero() {
-    this.model = new Hero(42, '', '');
+    this.model = new Hero(11, '', 25, 10, 7,);
   }
 }
