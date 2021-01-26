@@ -85,6 +85,7 @@
         <div class="col-xs-9">{{ model.strength }}</div>
       </div>
       <br>
+      <button type="create" class="btn btn-success" [disabled]="!heroForm.form.valid" (click)="Create()" routerLink="/heroes">Create hero</button>
       <button class="btn btn-primary" (click)="submitted=false">Edit</button>
     </div>
   </div>
