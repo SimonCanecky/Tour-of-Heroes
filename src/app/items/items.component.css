@@ -96,3 +96,11 @@
   .property:hover {
     background-color: #eee;
   }
+
+  .marginbtn{
+    margin: 10px 0px;
+  }
+  
+  .create-item{
+    margin-left: 10px;
+  }

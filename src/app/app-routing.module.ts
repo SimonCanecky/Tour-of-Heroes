@@ -8,6 +8,7 @@ import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { ShoplistComponent } from './shoplist/shoplist.component';
 import { HeroitemsComponent } from './heroitems/heroitems.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { ItemFormComponent } from './item-form/item-form.component';
 
 
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'detail-item/:id', component: ItemDetailComponent },
   { path: 'shoplist/:id', component: ShoplistComponent },
   { path: 'hero-form', component: HeroFormComponent },
+  { path: 'item-form', component: ItemFormComponent },
   //{ path: 'heroitems', component: HeroitemsComponent },
 ];
 

@@ -9,13 +9,16 @@
   </button>
 </div>
 
-<div class="dropdown">
-  <button class="button">{{sortBy}} ▼</button>
-  <div class="dropdownbtn">
-    <a class="property" (click)="sort('Item ID')">Item ID</a>
-    <a class="property" (click)="sort('Item Name')">Item Name</a>
-    <a class="property" (click)="sort('Item Price')">Item Price</a>
+<div class="marginbtn">
+  <div class="dropdown">
+    <button class="button">{{sortBy}} ▼</button>
+    <div class="dropdownbtn">
+      <a class="property" (click)="sort('Item ID')">Item ID</a>
+      <a class="property" (click)="sort('Item Name')">Item Name</a>
+      <a class="property" (click)="sort('Item Price')">Item Price</a>
+    </div>
   </div>
+  <button class="create-item"><a routerLink="/item-form">Create Item</a></button>
 </div>
 
 <ul class="items">

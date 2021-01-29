@@ -22,6 +22,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { ItemSearchComponent } from './item-search/item-search.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { ItemFormComponent } from './item-form/item-form.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
     HeroSearchComponent,
     ItemSearchComponent,
     HeroFormComponent,
+    ItemFormComponent,
 
   ],
   imports: [

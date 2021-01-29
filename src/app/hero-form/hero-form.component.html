@@ -5,7 +5,7 @@
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" class="form-control" id="name"
-                 required
+                 required maxlength="20"
                  [(ngModel)]="model.name" name="name"
                  #name="ngModel">
           <div [hidden]="name.valid || name.pristine"
@@ -36,7 +36,7 @@
         <div class="form-group">
           <label for="life">Life</label>
           <input type="text" class="form-control" id="life"
-                 required
+                 required pattern="^$|^([1-9]|[1]|[1][0])?"
                  [(ngModel)]="model.life" name="life"
                  #life="ngModel">
           <div [hidden]="life.valid || life.pristine"
@@ -48,7 +48,7 @@
         <div class="form-group">
           <label for="strength">Strength</label>
           <input type="text" class="form-control" id="strength"
-                 required
+                 required pattern="^$|^([1-9]|[1]|[1][0])?"
                  [(ngModel)]="model.strength" name="strength"
                  #strength="ngModel">
           <div [hidden]="strength.valid || strength.pristine"
@@ -57,7 +57,7 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Create hero</button>
+        <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Create Hero</button>
         <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Hero</button>
       </form>
     </div>
@@ -85,7 +85,7 @@
         <div class="col-xs-9">{{ model.strength }}</div>
       </div>
       <br>
-      <button type="create" class="btn btn-success" [disabled]="!heroForm.form.valid" (click)="Create()" routerLink="/heroes">Create hero</button>
+      <button type="create" class="btn btn-success" [disabled]="!heroForm.form.valid" (click)="Create()" routerLink="/heroes">Create Hero</button>
       <button class="btn btn-primary" (click)="submitted=false">Edit</button>
     </div>
   </div>
