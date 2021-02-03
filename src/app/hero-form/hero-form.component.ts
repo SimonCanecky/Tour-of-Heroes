@@ -20,7 +20,7 @@ export class HeroFormComponent {
   onSubmit() { this.submitted = true; }
 
   newHero() {
-    this.model = new Hero(11,'', 25, 10, 7,);
+    this.model = new Hero(null,'', 25, 10, 7,);
   }
 
   Create():void {

@@ -18,7 +18,7 @@ export class ItemFormComponent {
   onSubmit() { this.submitted = true; }
 
   newItem() {
-    this.model = new Item(11,'', 7);
+    this.model = new Item(null,'', 7);
   }
 
   Create():void {
