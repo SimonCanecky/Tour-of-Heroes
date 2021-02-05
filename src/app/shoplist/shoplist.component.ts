@@ -39,7 +39,7 @@ export class ShoplistComponent implements OnInit {
   buyitem(item: Item, heroitem: Heroitem): void {
     if (this.hero.money >= item.price){
       this.hero.money -= item.price;
-      this.hero.items.push(heroitem);
+      //this.hero.item.push(heroitem);
       this.heroService.updateHero(this.hero).subscribe();
     }
   }
