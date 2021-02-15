@@ -9,7 +9,7 @@ import { ShoplistComponent } from './shoplist/shoplist.component';
 import { HeroitemsComponent } from './heroitems/heroitems.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { ItemFormComponent } from './item-form/item-form.component';
-
+import {LoginComponent} from './login/login.component';
 
 
 
@@ -24,10 +24,13 @@ const routes: Routes = [
   { path: 'hero-form', component: HeroFormComponent },
   { path: 'item-form', component: ItemFormComponent },
   //{ path: 'heroitems', component: HeroitemsComponent },
+  { path: 'login', component: LoginComponent },
+  {path : '', component : LoginComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  declarations: []
 })
 export class AppRoutingModule { }

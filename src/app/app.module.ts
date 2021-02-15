@@ -24,6 +24,11 @@ import { ItemSearchComponent } from './item-search/item-search.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { ItemFormComponent } from './item-form/item-form.component';
 
+import { LoginComponent } from './login/login.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CustomMaterialModule } from './material.module';
+
+
 
 @NgModule({
   declarations: [
@@ -40,10 +45,12 @@ import { ItemFormComponent } from './item-form/item-form.component';
     ItemSearchComponent,
     HeroFormComponent,
     ItemFormComponent,
-
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    CustomMaterialModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
