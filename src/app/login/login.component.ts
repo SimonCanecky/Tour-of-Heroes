@@ -21,7 +21,7 @@ password: string;
   login() : void {
     if(this.username == 'admin' && this.password == 'admin'){
      this.router.navigate(["dashboard"]);}
-    if(this.username == 'user' && this.password == 'user'){
+    else if (this.username == 'user' && this.password == 'user'){
     this.router.navigate(["dashboard"]);}
     else {
       alert("Username or password are invalid");
